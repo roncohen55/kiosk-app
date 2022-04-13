@@ -1,5 +1,5 @@
 import { StyleSheet, Text, View,ActivityIndicator } from 'react-native';
-
+import MaterialCommunityIcons from 'react-native-vector-icons/MaterialCommunityIcons';
 import { createStackNavigator } from '@react-navigation/stack';
 import { createMaterialBottomTabNavigator } from '@react-navigation/material-bottom-tabs';
 
@@ -53,10 +53,46 @@ export const MenuStack = ()=>{
 export const TabsBottomStack = ()=>{
     return(
     <TabsBottomNavigation.Navigator>
-        <TabsBottomNavigation.Screen name='Dashboard' component={DashboardStack} />
-        <TabsBottomNavigation.Screen name='Stores' component={StoresStack} />
-        <TabsBottomNavigation.Screen name='Cart' component={CartStack} />
-        <TabsBottomNavigation.Screen name='Menu' component={MenuStack} />
+        <TabsBottomNavigation.Screen 
+        name='Dashboard'
+         component={DashboardStack} 
+         options={{tabBarLabel:'Dashboard'
+         ,tabBarIcon:() =>(<MaterialCommunityIcons
+             name="view-dashboard" 
+             color='#fff'
+             size={30}/>),}}
+         />
+        <TabsBottomNavigation.Screen 
+        name='Stores' 
+        component={StoresStack}
+        
+        options={{tabBarLabel:'Stores'
+        ,tabBarIcon:() =>(<MaterialCommunityIcons
+            name="storefront" 
+            color='#fff'
+            size={30}/>),}}
+        />
+        
+        <TabsBottomNavigation.Screen 
+        name='Cart'
+        component={CartStack} 
+
+        options={{tabBarLabel:'Cart'
+        ,tabBarIcon:() =>(<MaterialCommunityIcons
+            name="cart" 
+            color='#fff'
+            size={30}/>),}}
+        />
+        <TabsBottomNavigation.Screen 
+        name='Menu'
+         component={MenuStack}
+
+         options={{tabBarLabel:'Menu'
+         ,tabBarIcon:() =>(<MaterialCommunityIcons
+             name="menu" 
+             color='#fff'
+             size={30}/>),}}
+          />
     </TabsBottomNavigation.Navigator>
     )
 }
