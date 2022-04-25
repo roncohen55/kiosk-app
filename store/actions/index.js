@@ -3,17 +3,20 @@ const baseUrl = 'http://localhost:5090/api/';
 
 
 export const get_stores_action = ()=>{
+
     return async dispatch =>{
-        const response = await fatch(baseUrl + 'store/getGeneralData',{
+        const response = await fetch(baseUrl + 'store/getGeneralData',{
             method:'get',
             headers:{
                 'Content-Type':'application/json'
-                
             }
-        });
+        }); 
 
         const data = await response.json();
+        console.log(data);
+        console.log('4');
         if(data.status){
+
             dispatch(get_stores_dispath(data));
         }
         else{

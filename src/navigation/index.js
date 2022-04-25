@@ -54,16 +54,16 @@ export const TabsBottomStack = ()=>{
     return(
     <TabsBottomNavigation.Navigator>
         <TabsBottomNavigation.Screen 
-        name='Dashboard'
+        name='DashboardTab'
          component={DashboardStack} 
          options={{tabBarLabel:'Dashboard'
          ,tabBarIcon:() =>(<MaterialCommunityIcons
-             name="view-dashboard" 
+             name="view-dashboard"  
              color='#fff'
              size={30}/>),}}
          />
         <TabsBottomNavigation.Screen 
-        name='Stores' 
+        name='StoresTab' 
         component={StoresStack}
         
         options={{tabBarLabel:'Stores'
@@ -74,7 +74,7 @@ export const TabsBottomStack = ()=>{
         />
         
         <TabsBottomNavigation.Screen 
-        name='Cart'
+        name='CartTab'
         component={CartStack} 
 
         options={{tabBarLabel:'Cart'
@@ -84,7 +84,7 @@ export const TabsBottomStack = ()=>{
             size={30}/>),}}
         />
         <TabsBottomNavigation.Screen 
-        name='Menu'
+        name='MenuTab'
          component={MenuStack}
 
          options={{tabBarLabel:'Menu'
