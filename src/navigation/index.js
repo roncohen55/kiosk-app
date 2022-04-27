@@ -5,6 +5,7 @@ import { createMaterialBottomTabNavigator } from '@react-navigation/material-bot
 
 import DashboardScreen from '../screens/dashboard';
 import StoresScreen from '../screens/stores';
+import StoresInfoScreen from '../screens/stores/storeInfo';
 import CartScreen from '../screens/cart';
 import MenuScreen from '../screens/menu';
 
@@ -30,6 +31,7 @@ export const StoresStack = ()=>{
     return (
         <StoresStackNavigation.Navigator>
             <StoresStackNavigation.Screen name='Stores' component={StoresScreen} />
+            <StoresStackNavigation.Screen name='StoresInfo' component={StoresInfoScreen} />
         </StoresStackNavigation.Navigator>
     )
 }
